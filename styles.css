@@ -17,10 +17,15 @@ body {
     --border-color: #ff9a0045;
     --text-decoration-color: #ff9a00;
 }
-.container {
+.container, .container__skills {
     margin: 0 auto;
     padding: 0 30px;
     max-width: 900px;
+}
+
+.container__skills {
+    display: flex;
+    justify-content: space-between;
 }
 
 .fh {
@@ -44,10 +49,25 @@ body {
     background-color: white;
 }
 
-.resume__block {
+.resume__block, .resume__block-skills {
     border-bottom: 3px solid var(--border-color);
     padding-bottom: 30px;
     margin-bottom: 15px;
+}
+
+.resume__block-skills {
+    width: 100%;
+}
+
+.resume__block a, .resume__block a:visited {
+    color: var(--secondary-text-color);
+}
+
+.bsa-links {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 @media screen and (max-width: 576px) {
@@ -101,15 +121,11 @@ body {
     color: var(--secondary-text-color);
     text-decoration: none;
     display: flex;
-    justify-content: start;
-}
-
-.contact-info__item:not(:last-child) {
-    margin-bottom: 20px;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .contact-info__item-icon-wrapper {
-    margin-right: 10px;
     width: 20px;
     display: flex;
     justify-content: center;
@@ -117,6 +133,10 @@ body {
 
 .contact-info__item-icon path {
     fill: var(--icon-color);
+}
+
+.contact-info__item span {
+    margin: 10px;
 }
 
 .contact-info__item-icon {
@@ -136,6 +156,16 @@ body {
 .intro {
     display: flex;
     justify-content: start;
+}
+
+.skills__block{
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
 }
 
 .intro__icon-wrapper {
@@ -193,7 +223,6 @@ body {
     text-decoration-color: var(--text-decoration-color);
     text-decoration-line: underline;
     text-align: left;
-    margin-bottom: 20px;
 }
 
 .experiences__company-project {
